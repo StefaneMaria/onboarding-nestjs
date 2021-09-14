@@ -1,9 +1,15 @@
 version: '3.3'
 
 services:
-  njs: #container do NestJS
+  njs: 
     build: .
     ports:
-      - '3000:3000'
-    container_name: 'project-00'
-    restart: always #faz com que o compose sempre rode na ultima versao do projeto
+      - 3000:3000
+    depends_on:
+      - db
+    restart: always 
+
+  db:
+    image: mongo     
+    ports:
+      - 27017:27017
