@@ -19,7 +19,6 @@ export class RecipeController {
     ){
         const generatedId = await this.recipeService.create( recName, recIngr, recPrep);
         return { id: generatedId };
-
     }
-
+    
 }

@@ -17,11 +17,4 @@ export class RecipeService {
         const result = await newRecipe.save();
         return result.id as string;
     }
-
-/*
-    async create(recipe: Recipe): Promise<Recipe>{
-        const createdRecipe = new this.recipeModel(recipe);
-        return createdRecipe.save();
-    }
-*/
 }
